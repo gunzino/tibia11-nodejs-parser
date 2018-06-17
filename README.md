@@ -23,9 +23,9 @@ getItemById(itemId)
 
 getAllItems()
 
-getOutfitById()
+getOutfitById(outfitId)
 
-getAllOutfits(outfitId)
+getAllOutfits()
 
 save(fileName)
 
