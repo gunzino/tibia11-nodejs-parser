@@ -1,0 +1,23 @@
+{
+  "name": "tibia11-nodejs-parser",
+  "version": "1.0.0",
+  "description": "",
+  "main": "parser.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gunzino/tibia11-nodejs-parser.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gunzino/tibia11-nodejs-parser/issues"
+  },
+  "homepage": "https://github.com/gunzino/tibia11-nodejs-parser#readme",
+  "dependencies": {
+    "minimist": "^1.2.0",
+    "protobufjs": "^6.8.6"
+  }
+}
