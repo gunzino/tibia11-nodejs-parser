@@ -4,14 +4,13 @@ const ProtoBuf = require('protobufjs'),
   fs = require('fs');
 
 function Appearances() {
-  this.appearancesProto = '../assets/appearances.proto';
   this.loaded = false;
 }
 
 
 Appearances.prototype.loadFile = async function(fileName) {
   try {
-    this.protoRoot = await ProtoBuf.load("./assets/appearances.proto");
+    this.protoRoot = await ProtoBuf.load("./proto/appearances.proto");
   } catch (e) {
     console.log("Cannot load appearances proto file");
     throw e;
