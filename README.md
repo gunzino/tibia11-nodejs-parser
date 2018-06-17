@@ -25,7 +25,7 @@ getAllItems()
 
 getOutfitById()
 
-getAllOutfits()
+getAllOutfits(outfitId)
 
 save(fileName)
 

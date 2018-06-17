@@ -48,7 +48,7 @@ Appearances.prototype.getAllItems = function () {
   return this.data.object;
 }
 
-Appearances.prototype.getOutfitById = function(outfitId) {
+  Appearances.prototype.getOutfitById = function(outfitId) {
   if (!this.loaded) {
     console.log("ERROR: Appearances are not loaded");
     return null;
