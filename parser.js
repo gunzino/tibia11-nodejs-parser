@@ -17,4 +17,5 @@ const  fs = require('fs'),
   appearances.loadFile(argv.file).then(function() {
     var citizenOutift = appearances.getOutfitById(136);
     var plateArmor = appearances.getItemById(2463);
+    appearances.save('test.dat');
   });

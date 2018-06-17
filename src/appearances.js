@@ -20,6 +20,7 @@ Appearances.prototype.loadFile = async function(fileName) {
   var assetFile = await fs.readFileSync(fileName);
   console.log(`>> Decoding ` + fileName);
   this.data = this.protoObject.decode(assetFile);
+  this.fileName = fileName;
   this.loaded = true;
   return true;
 }
@@ -68,6 +69,15 @@ Appearances.prototype.getAllOutfits = function () {
     return null;
   }
   return this.data.outfit;
+}
+
+Appearances.prototype.save = function (fileName) {
+  var saveFileName = fileName;
+  if (!fileName) {
+    saveFileName = this.fileName.slice(0, this.fileName.indexOf('.dat')) + "-edited.dat";
+  }
+  var buffer = this.protoObject.encode(this.data).finish();
+  fs.writeFileSync(saveFileName, buffer, "binary");
 }
 
 module.exports = Appearances;
