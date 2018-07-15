@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/gunzino/tibia11-nodejs-parser#readme",
   "dependencies": {
+    "jimp": "^0.2.28",
     "lzma-native": "^3.0.8",
     "minimist": "^1.2.0",
     "protobufjs": "^6.8.6"

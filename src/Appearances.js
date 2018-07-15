@@ -8,18 +8,19 @@ function Appearances() {
 }
 
 
-Appearances.prototype.loadFile = async function(fileName) {
+Appearances.prototype.load = async function() {
   try {
     this.protoRoot = await ProtoBuf.load("./proto/appearances.proto");
   } catch (e) {
     console.log("Cannot load appearances proto file");
     throw e;
   }
+  this.catalog = JSON.parse(fs.readFileSync('assets/catalog-content.json'));
   this.protoObject = this.protoRoot.lookupType("tibia.protobuf.appearances.Appearances");
-  var assetFile = await fs.readFileSync(fileName);
-  console.log(`>> Decoding ` + fileName);
+  var assetFile = fs.readFileSync('assets/' + this.catalog[0].file);
+  console.log(`>> Decoding ` + 'assets/' + this.catalog[0].file);
   this.data = this.protoObject.decode(assetFile);
-  this.fileName = fileName;
+  this.fileName = 'assets/' + this.catalog[0].file;
   this.loaded = true;
   return true;
 }

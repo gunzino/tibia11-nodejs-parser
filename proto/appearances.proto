@@ -58,6 +58,7 @@ message Appearance {
  optional uint32 id = 1;
  repeated FrameGroup frame_group = 2;
  optional AppearanceFlags flags = 3;
+ optional string name = 4;
 }
 
 message AppearanceFlags {
@@ -101,6 +102,10 @@ message AppearanceFlags {
  optional bool unwrap = 38;
  optional bool topeffect = 39;
  repeated AppearanceFlagNPC npcsaledata = 40;
+ optional AppearanceFlagChangedToExpire changedtoexpire = 41;
+ optional bool corpse = 42;
+ optional bool player_corpse = 43;
+ optional AppearanceFlagCyclopedia cyclopediaitem = 44;
 }
 
 message AppearanceFlagBank {
@@ -141,7 +146,6 @@ message AppearanceFlagMarket {
  optional shared.ITEM_CATEGORY category = 1;
  optional uint32 trade_as_object_id = 2;
  optional uint32 show_as_object_id = 3;
- optional string name = 4;
  repeated shared.PLAYER_PROFESSION restrict_to_profession = 5;
  optional uint32 minimum_level = 6;
 }
@@ -163,5 +167,13 @@ message AppearanceFlagHook {
 
 message AppearanceFlagLenshelp {
  optional uint32 id = 1;
+}
+
+message AppearanceFlagChangedToExpire {
+ optional uint32 former_object_typeid = 1;
+}
+
+message AppearanceFlagCyclopedia {
+ optional uint32 cyclopedia_type = 1;
 }
 
