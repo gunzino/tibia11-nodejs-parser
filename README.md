@@ -11,9 +11,9 @@ npm install
 
 
 ## Usage
-Copy apperances.dat file to the root folder and run:
+Copy assets folder to the root folder of the program and run:
 
-node parser.js appearancesFile.dat
+node parser.js
 
 Actually contains functions:
 
