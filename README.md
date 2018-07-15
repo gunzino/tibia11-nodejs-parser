@@ -17,7 +17,7 @@ node parser.js
 
 Actually contains functions:
 
-loadFile(fileName)
+load()
 
 getItemById(itemId)
 
